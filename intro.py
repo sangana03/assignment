@@ -1,10 +1,12 @@
-def isBalanced(expr):
-  stack=[]
-  for char in expr:
-  if char in ["(","[","{"]
-  stack.apphend(char)
-else:
-if not stack:
-return false
-current_char=stack.pop()
-if current_char=='(' :
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def is_empty(self):
+        return len(self.items) == 0
